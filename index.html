@@ -1,0 +1,3578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Queeneth Kosy Business Solution | Beauty & Cosmetics</title>
+
+    <meta name="description"
+        content="Queeneth Kosy Business Solution - Affordable cosmetics, skincare, makeup and beauty products in Nigeria.">
+    <meta name="keywords"
+        content="cosmetics, makeup, skincare, beauty products, Nigeria, Queeneth Kosy">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           QUEENETH KOSY BUSINESS SOLUTION
+           COSMETICS E-COMMERCE WEBSITE
+        ========================================================= */
+
+        :root {
+            --pink: #e98aaa;
+            --pink-dark: #c85f83;
+            --pink-light: #ffe7ef;
+
+            --sage: #7da58b;
+            --sage-dark: #4e7860;
+            --sage-light: #e5f1e8;
+
+            --cream: #fffaf5;
+            --cream-dark: #f7eee5;
+
+            --brown: #5b4541;
+            --text: #493e3a;
+            --white: #ffffff;
+
+            --shadow: 0 12px 40px rgba(92, 65, 70, 0.12);
+            --radius: 22px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 250, 245, 0.94);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(125, 165, 139, 0.18);
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: auto;
+            padding: 14px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        /* ================= LOGO ================= */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 240px;
+        }
+
+        .logo-svg {
+            width: 58px;
+            height: 58px;
+            flex-shrink: 0;
+        }
+
+        .logo-text strong {
+            display: block;
+            color: var(--sage-dark);
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            color: var(--pink-dark);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--brown);
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--pink-dark);
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -7px;
+            left: 0;
+            background: var(--pink);
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            width: 43px;
+            height: 43px;
+            border: 0;
+            background: var(--white);
+            color: var(--sage-dark);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0 4px 18px rgba(80, 60, 60, 0.08);
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .icon-btn:hover {
+            background: var(--pink-light);
+            transform: translateY(-2px);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -4px;
+            right: -3px;
+            width: 20px;
+            height: 20px;
+            background: var(--pink-dark);
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 15% 25%, rgba(233, 138, 170, .30), transparent 30%),
+                radial-gradient(circle at 85% 70%, rgba(125, 165, 139, .25), transparent 32%),
+                var(--cream);
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(2px);
+            animation: float 7s ease-in-out infinite;
+        }
+
+        .hero::before {
+            width: 350px;
+            height: 350px;
+            background: rgba(233, 138, 170, .18);
+            right: -100px;
+            top: 60px;
+        }
+
+        .hero::after {
+            width: 260px;
+            height: 260px;
+            background: rgba(125, 165, 139, .18);
+            left: -80px;
+            bottom: -50px;
+            animation-delay: -3s;
+        }
+
+        .moving-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: .45;
+            animation: drift 12s linear infinite;
+        }
+
+        .shape-one {
+            width: 80px;
+            height: 80px;
+            background: var(--pink);
+            top: 18%;
+            left: 45%;
+        }
+
+        .shape-two {
+            width: 45px;
+            height: 45px;
+            background: var(--sage);
+            top: 65%;
+            left: 10%;
+            animation-duration: 9s;
+        }
+
+        .shape-three {
+            width: 65px;
+            height: 65px;
+            background: #f4c6d6;
+            right: 20%;
+            bottom: 13%;
+            animation-duration: 15s;
+        }
+
+        .hero-content {
+            width: min(1250px, 92%);
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-copy .eyebrow {
+            display: inline-flex;
+            padding: 8px 15px;
+            border-radius: 30px;
+            background: var(--sage-light);
+            color: var(--sage-dark);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(44px, 6vw, 78px);
+            line-height: 1.02;
+            color: var(--brown);
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--pink-dark);
+        }
+
+        .hero p {
+            max-width: 570px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #6e5c57;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 22px;
+            border: none;
+            border-radius: 13px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--pink-dark);
+            color: white;
+            box-shadow: 0 10px 25px rgba(200, 95, 131, .25);
+        }
+
+        .btn-primary:hover {
+            background: #b94e74;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: var(--sage-light);
+            color: var(--sage-dark);
+        }
+
+        .btn-secondary:hover {
+            background: #d5e8da;
+            transform: translateY(-3px);
+        }
+
+        /* HERO BEAUTY DISPLAY */
+
+        .beauty-display {
+            min-height: 500px;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+
+        .display-circle {
+            width: 440px;
+            height: 440px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #f8c4d5, #dcebdd);
+            position: absolute;
+            animation: pulse 5s ease-in-out infinite;
+        }
+
+        .product-showcase {
+            position: relative;
+            z-index: 2;
+            width: 340px;
+            height: 430px;
+            background: rgba(255, 255, 255, .68);
+            border: 1px solid rgba(255,255,255,.8);
+            border-radius: 170px 170px 30px 30px;
+            box-shadow: 0 30px 70px rgba(84, 61, 63, .18);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .showcase-bottle {
+            width: 130px;
+            height: 270px;
+            border-radius: 30px 30px 18px 18px;
+            background: linear-gradient(90deg, #e8f0e7, #fff, #e2eee4);
+            box-shadow: 15px 20px 35px rgba(75, 93, 80, .20);
+            position: relative;
+            animation: bottleFloat 4s ease-in-out infinite;
+        }
+
+        .showcase-cap {
+            position: absolute;
+            width: 100px;
+            height: 45px;
+            background: var(--sage-dark);
+            border-radius: 12px 12px 5px 5px;
+            top: -35px;
+            left: 15px;
+        }
+
+        .showcase-label {
+            position: absolute;
+            top: 90px;
+            left: 10px;
+            right: 10px;
+            background: var(--pink-light);
+            padding: 15px 5px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .showcase-label strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            color: var(--sage-dark);
+            font-size: 16px;
+        }
+
+        .showcase-label span {
+            font-size: 7px;
+            letter-spacing: 1px;
+            color: var(--pink-dark);
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            border-radius: 18px;
+            padding: 13px 16px;
+            box-shadow: var(--shadow);
+            z-index: 5;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .floating-card.one {
+            top: 60px;
+            right: 15px;
+        }
+
+        .floating-card.two {
+            bottom: 50px;
+            left: 5px;
+            animation-delay: -2s;
+        }
+
+        .floating-card strong {
+            display: block;
+            color: var(--sage-dark);
+            font-size: 13px;
+        }
+
+        .floating-card small {
+            color: #8b7974;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .section-heading .tag {
+            color: var(--pink-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+            font-size: 11px;
+        }
+
+        .section-heading h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(32px, 5vw, 48px);
+            color: var(--brown);
+            margin: 9px 0 13px;
+        }
+
+        .section-heading p {
+            color: #786864;
+            line-height: 1.7;
+        }
+
+        /* ================= FEATURES ================= */
+
+        .features {
+            background: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 28px 20px;
+            border-radius: var(--radius);
+            background: var(--cream);
+            text-align: center;
+            transition: .3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--pink-light);
+            font-size: 23px;
+        }
+
+        .feature h3 {
+            color: var(--brown);
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .feature p {
+            color: #887773;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* ================= SHOP ================= */
+
+        .shop-section {
+            background: var(--cream);
+        }
+
+        .shop-tools {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px 15px 45px;
+            border: 1px solid #eaded5;
+            background: white;
+            border-radius: 14px;
+            outline: none;
+            font-family: inherit;
+            color: var(--text);
+        }
+
+        .search-box span {
+            position: absolute;
+            left: 17px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            border: none;
+            background: white;
+            color: var(--brown);
+            padding: 12px 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--sage-dark);
+            color: white;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 23px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 7px 25px rgba(89, 63, 63, .06);
+            transition: .35s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-image {
+            height: 300px;
+            background: #f5eee8;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.07);
+        }
+
+        .product-badge {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            background: var(--sage-dark);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        .wishlist {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            background: white;
+            cursor: pointer;
+            color: var(--pink-dark);
+            z-index: 2;
+        }
+
+        .product-info {
+            padding: 17px;
+        }
+
+        .product-category {
+            font-size: 10px;
+            color: var(--pink-dark);
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .product-info h3 {
+            color: var(--brown);
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .stars {
+            color: #e6a65c;
+            font-size: 12px;
+        }
+
+        .product-bottom {
+            margin-top: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .price {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--sage-dark);
+        }
+
+        .old-price {
+            font-size: 11px;
+            color: #aaa;
+            text-decoration: line-through;
+            margin-left: 3px;
+        }
+
+        .add-cart {
+            border: none;
+            background: var(--pink-dark);
+            color: white;
+            width: 39px;
+            height: 39px;
+            border-radius: 11px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .add-cart:hover {
+            background: var(--sage-dark);
+            transform: scale(1.08);
+        }
+
+        /* ================= PROMO ================= */
+
+        .promo {
+            padding: 0 0 90px;
+        }
+
+        .promo-box {
+            width: min(1150px, 92%);
+            margin: auto;
+            border-radius: 30px;
+            overflow: hidden;
+            padding: 55px;
+            background:
+                radial-gradient(circle at 90% 20%, rgba(255,255,255,.3), transparent 30%),
+                linear-gradient(120deg, var(--sage-dark), #6d9279);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+        }
+
+        .promo-box h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .promo-box p {
+            color: #e8f2ea;
+            max-width: 580px;
+            line-height: 1.7;
+        }
+
+        .promo-box .btn {
+            background: var(--pink-light);
+            color: var(--pink-dark);
+            white-space: nowrap;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-visual {
+            min-height: 440px;
+            border-radius: 30px;
+            background: var(--pink-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-visual::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--sage-light);
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-bottle {
+            position: absolute;
+            width: 115px;
+            height: 240px;
+            background: white;
+            border-radius: 25px 25px 15px 15px;
+            top: 105px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 20px 25px 35px rgba(75, 93, 80, .15);
+        }
+
+        .about-bottle::before {
+            content: "";
+            position: absolute;
+            width: 85px;
+            height: 35px;
+            background: var(--pink-dark);
+            left: 15px;
+            top: -25px;
+            border-radius: 10px 10px 3px 3px;
+        }
+
+        .about-bottle::after {
+            content: "QUEENETH\nKOSY";
+            white-space: pre;
+            text-align: center;
+            position: absolute;
+            top: 85px;
+            left: 15px;
+            right: 15px;
+            padding: 14px 2px;
+            background: var(--sage-light);
+            color: var(--sage-dark);
+            font-family: "Playfair Display", serif;
+            font-size: 13px;
+            line-height: 1.5;
+            border-radius: 8px;
+        }
+
+        .about-text .tag {
+            color: var(--pink-dark);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .about-text h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--brown);
+            font-size: 44px;
+            margin: 10px 0 20px;
+        }
+
+        .about-text p {
+            line-height: 1.8;
+            color: #756662;
+            margin-bottom: 17px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 20px 0 25px;
+        }
+
+        .check-list li {
+            margin: 12px 0;
+            font-weight: 600;
+            color: var(--brown);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--sage-dark);
+            background: var(--sage-light);
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+            display: inline-grid;
+            place-items: center;
+        }
+
+        /* ================= BLOG ================= */
+
+        .blog {
+            background: var(--cream);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(90, 70, 65, .06);
+            transition: .3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .blog-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 22px;
+        }
+
+        .blog-date {
+            color: var(--pink-dark);
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .blog-content h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--brown);
+            font-size: 21px;
+            margin: 8px 0;
+        }
+
+        .blog-content p {
+            color: #80706c;
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: var(--sage-dark);
+            font-weight: 800;
+            font-size: 12px;
+            margin-top: 13px;
+        }
+
+        /* ================= TESTIMONIALS ================= */
+
+        .testimonials {
+            background: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .testimonial {
+            background: var(--cream);
+            padding: 27px;
+            border-radius: 20px;
+        }
+
+        .testimonial .stars {
+            margin-bottom: 12px;
+        }
+
+        .testimonial p {
+            line-height: 1.7;
+            color: #70615c;
+            font-size: 14px;
+        }
+
+        .customer {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-top: 18px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--pink-light);
+            display: grid;
+            place-items: center;
+            color: var(--pink-dark);
+            font-weight: 800;
+        }
+
+        .customer strong {
+            display: block;
+            font-size: 13px;
+        }
+
+        .customer span {
+            font-size: 11px;
+            color: #8e807a;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: var(--sage-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 40px;
+        }
+
+        .contact-info h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--brown);
+            font-size: 43px;
+            margin: 8px 0 17px;
+        }
+
+        .contact-info > p {
+            color: #6e625e;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin: 18px 0;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 13px;
+            display: grid;
+            place-items: center;
+            color: var(--pink-dark);
+            flex-shrink: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--brown);
+            margin-bottom: 3px;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: #746762;
+            font-size: 14px;
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            color: var(--brown);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 7px;
+            color: var(--brown);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            border: 1px solid #eaded5;
+            border-radius: 12px;
+            padding: 13px;
+            outline: none;
+            font-family: inherit;
+            color: var(--text);
+            background: #fffdfb;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* ================= NEWSLETTER ================= */
+
+        .newsletter {
+            background: var(--cream);
+        }
+
+        .newsletter-box {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .newsletter-box h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            color: var(--brown);
+            margin-bottom: 10px;
+        }
+
+        .newsletter-box p {
+            color: #7b6c67;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 560px;
+            margin: auto;
+            background: white;
+            padding: 6px;
+            border-radius: 14px;
+            box-shadow: 0 5px 25px rgba(80,60,60,.07);
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            border: 0;
+            outline: 0;
+            padding: 13px;
+            background: transparent;
+            font-family: inherit;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #e5f0e7;
+            padding: 55px 0 20px;
+        }
+
+        .footer-grid {
+            width: min(1150px, 92%);
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand p {
+            color: #6f7c73;
+            line-height: 1.7;
+            font-size: 13px;
+            max-width: 330px;
+            margin-top: 15px;
+        }
+
+        .footer-col h3 {
+            color: var(--brown);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #718078;
+            font-size: 13px;
+            margin: 10px 0;
+        }
+
+        .footer-col a:hover {
+            color: var(--pink-dark);
+        }
+
+        .footer-bottom {
+            width: min(1150px, 92%);
+            margin: 35px auto 0;
+            padding-top: 18px;
+            border-top: 1px solid rgba(79, 120, 96, .15);
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            color: #78847c;
+            font-size: 12px;
+        }
+
+        /* ================= CART DRAWER ================= */
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(60, 45, 45, .4);
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            right: -450px;
+            width: min(430px, 92%);
+            height: 100vh;
+            background: white;
+            z-index: 2100;
+            box-shadow: -10px 0 50px rgba(50,40,40,.15);
+            transition: .35s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-drawer.active {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee5df;
+        }
+
+        .cart-header h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--brown);
+        }
+
+        .close-cart {
+            width: 35px;
+            height: 35px;
+            border: none;
+            background: var(--pink-light);
+            color: var(--pink-dark);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 18px;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 65px 1fr auto;
+            gap: 12px;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee7e2;
+        }
+
+        .cart-item img {
+            width: 65px;
+            height: 65px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .cart-item h4 {
+            font-size: 13px;
+            color: var(--brown);
+        }
+
+        .cart-item small {
+            color: var(--sage-dark);
+            font-weight: 700;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 6px;
+        }
+
+        .quantity button {
+            width: 22px;
+            height: 22px;
+            border: 0;
+            border-radius: 6px;
+            background: var(--sage-light);
+            color: var(--sage-dark);
+            cursor: pointer;
+        }
+
+        .remove-item {
+            border: none;
+            background: transparent;
+            color: #c28c8c;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .cart-footer {
+            border-top: 1px solid #eee5df;
+            padding: 20px;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--brown);
+            margin-bottom: 15px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 70px 20px;
+            color: #8b7d77;
+        }
+
+        .empty-cart div {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        /* ================= ACCOUNT MODAL ================= */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            display: grid;
+            place-items: center;
+            padding: 20px;
+            background: rgba(60, 45, 45, .5);
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-box {
+            background: white;
+            width: min(440px, 100%);
+            border-radius: 25px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 34px;
+            height: 34px;
+            border: 0;
+            background: var(--pink-light);
+            color: var(--pink-dark);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .modal-box h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--brown);
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .modal-box > p {
+            color: #83746e;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        /* ================= TOAST ================= */
+
+        .toast {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translate(-50%, 100px);
+            background: var(--sage-dark);
+            color: white;
+            padding: 13px 20px;
+            border-radius: 12px;
+            z-index: 5000;
+            font-size: 13px;
+            font-weight: 700;
+            opacity: 0;
+            transition: .4s;
+            box-shadow: var(--shadow);
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        /* ================= ANIMATIONS ================= */
+
+        @keyframes float {
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-18px);
+            }
+        }
+
+        @keyframes bottleFloat {
+            0%,100% {
+                transform: translateY(0) rotate(-2deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(2deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%,100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(80px, -40px);
+            }
+
+            50% {
+                transform: translate(130px, 50px);
+            }
+
+            75% {
+                transform: translate(-40px, 80px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1050px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav {
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 850px) {
+
+            .mobile-menu {
+                display: grid;
+            }
+
+            nav {
+                position: fixed;
+                top: 86px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                transform: translateY(-150%);
+                transition: .35s;
+                box-shadow: 0 20px 30px rgba(60,40,40,.1);
+            }
+
+            nav.open {
+                transform: translateY(0);
+            }
+
+            .hero-content,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 80px 0;
+            }
+
+            .beauty-display {
+                min-height: 450px;
+            }
+
+            .blog-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .promo-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 620px) {
+
+            .logo {
+                min-width: auto;
+            }
+
+            .logo-text strong {
+                font-size: 14px;
+            }
+
+            .logo-text span {
+                font-size: 8px;
+            }
+
+            .logo-svg {
+                width: 45px;
+                height: 45px;
+            }
+
+            .header-actions .account-btn {
+                display: none;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 13px;
+            }
+
+            .product-image {
+                height: 220px;
+            }
+
+            .product-info {
+                padding: 12px;
+            }
+
+            .product-info h3 {
+                font-size: 15px;
+            }
+
+            .price {
+                font-size: 14px;
+            }
+
+            .old-price {
+                display: none;
+            }
+
+            .add-cart {
+                width: 35px;
+                height: 35px;
+            }
+
+            .display-circle {
+                width: 300px;
+                height: 300px;
+            }
+
+            .product-showcase {
+                width: 260px;
+                height: 360px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .promo-box {
+                padding: 35px 25px;
+            }
+
+            .promo-box h2 {
+                font-size: 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: 6px;
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .newsletter-form input {
+                background: white;
+                border-radius: 12px;
+            }
+
+            .newsletter-form button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header>
+        <div class="navbar">
+
+            <a href="#home" class="logo">
+
+                <!-- Original SVG LOGO -->
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" fill="#fff7f2" stroke="#7da58b" stroke-width="3"/>
+
+                    <!-- flower -->
+                    <path d="M50 57
+                             C33 47 32 30 43 24
+                             C48 31 50 38 50 47
+                             C50 38 53 30 58 24
+                             C68 31 67 47 50 57Z"
+                          fill="#e98aaa"/>
+
+                    <path d="M50 55
+                             C40 43 40 33 50 25
+                             C60 33 60 43 50 55Z"
+                          fill="#f7b4ca"/>
+
+                    <!-- leaves -->
+                    <path d="M47 60
+                             C31 58 22 63 19 73
+                             C31 76 42 71 50 63Z"
+                          fill="#7da58b"/>
+
+                    <path d="M53 60
+                             C69 58 78 63 81 73
+                             C69 76 58 71 50 63Z"
+                          fill="#5e8a6d"/>
+
+                    <!-- K -->
+                    <text x="50" y="86"
+                          text-anchor="middle"
+                          font-size="17"
+                          font-family="Georgia"
+                          font-weight="bold"
+                          fill="#c85f83">QK</text>
+                </svg>
+
+                <div class="logo-text">
+                    <strong>Queeneth Kosy</strong>
+                    <span>BUSINESS SOLUTION</span>
+                </div>
+
+            </a>
+
+            <nav id="mainNav">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button class="icon-btn account-btn"
+                    onclick="openAccount()"
+                    title="Account">
+                    👤
+                </button>
+
+                <button class="icon-btn"
+                    onclick="openCart()"
+                    title="Shopping Cart">
+                    🛍️
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+
+                <button class="icon-btn mobile-menu"
+                    onclick="toggleMenu()">
+                    ☰
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="moving-shape shape-one"></div>
+            <div class="moving-shape shape-two"></div>
+            <div class="moving-shape shape-three"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        ✨ BEAUTY • CARE • CONFIDENCE
+                    </div>
+
+                    <h1>
+                        Your Beauty,
+                        <span>Your Way.</span>
+                    </h1>
+
+                    <p>
+                        Welcome to Queeneth Kosy Business Solution —
+                        your friendly destination for beautiful,
+                        affordable and carefully selected cosmetics.
+                        Discover makeup, skincare and everyday beauty
+                        essentials without breaking the bank.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#shop" class="btn btn-primary">
+                            🛍️ Shop Cosmetics
+                        </a>
+
+                        <a href="#about" class="btn btn-secondary">
+                            Discover Our Story
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="beauty-display">
+
+                    <div class="display-circle"></div>
+
+                    <div class="product-showcase">
+
+                        <div class="showcase-bottle">
+                            <div class="showcase-cap"></div>
+
+                            <div class="showcase-label">
+                                <strong>Queeneth</strong>
+                                <span>BEAUTY SOLUTION</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card one">
+                        <strong>💗 Affordable Beauty</strong>
+                        <small>Beauty made accessible</small>
+                    </div>
+
+                    <div class="floating-card two">
+                        <strong>🌿 Carefully Selected</strong>
+                        <small>Cosmetics you'll love</small>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             FEATURES
+        ====================================================== -->
+
+        <section class="features">
+
+            <div class="container">
+
+                <div class="feature-grid">
+
+                    <div class="feature">
+                        <div class="feature-icon">💰</div>
+                        <h3>Affordable Prices</h3>
+                        <p>
+                            Great beauty products at friendly,
+                            budget-conscious prices.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">🧴</div>
+                        <h3>Cosmetics Only</h3>
+                        <p>
+                            Our store is dedicated to makeup,
+                            skincare and beauty essentials.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">📦</div>
+                        <h3>Easy Ordering</h3>
+                        <p>
+                            Add your favourites to your cart
+                            and order with ease.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">💗</div>
+                        <h3>Customer Care</h3>
+                        <p>
+                            We are here to help you choose
+                            products you'll love.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SHOP
+        ====================================================== -->
+
+        <section class="shop-section" id="shop">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="tag">Our Collection</span>
+
+                    <h2>Beauty Favourites</h2>
+
+                    <p>
+                        Shop our selection of affordable cosmetics,
+                        makeup and skincare essentials.
+                    </p>
+
+                </div>
+
+                <div class="shop-tools">
+
+                    <div class="search-box">
+                        <span>🔎</span>
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Search cosmetics..."
+                            oninput="searchProducts()">
+                    </div>
+
+                    <div class="filters">
+
+                        <button class="filter-btn active"
+                            onclick="filterProducts('all', this)">
+                            All
+                        </button>
+
+                        <button class="filter-btn"
+                            onclick="filterProducts('skincare', this)">
+                            Skincare
+                        </button>
+
+                        <button class="filter-btn"
+                            onclick="filterProducts('makeup', this)">
+                            Makeup
+                        </button>
+
+                        <button class="filter-btn"
+                            onclick="filterProducts('lips', this)">
+                            Lips
+                        </button>
+
+                        <button class="filter-btn"
+                            onclick="filterProducts('tools', this)">
+                            Beauty Tools
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="products-grid" id="productsGrid"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROMO
+        ====================================================== -->
+
+        <section class="promo">
+
+            <div class="promo-box">
+
+                <div>
+                    <h2>Beauty should feel good.</h2>
+
+                    <p>
+                        Whether you're refreshing your skincare routine,
+                        creating a new makeup look or shopping for a gift,
+                        Queeneth Kosy Business Solution is here to make
+                        beauty shopping easier and more affordable.
+                    </p>
+                </div>
+
+                <a href="#shop" class="btn">
+                    Explore Products →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section class="about" id="about">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-visual">
+                        <div class="about-bottle"></div>
+                    </div>
+
+                    <div class="about-text">
+
+                        <span class="tag">About Queeneth Kosy</span>
+
+                        <h2>Beauty without the stress.</h2>
+
+                        <p>
+                            Queeneth Kosy Business Solution was created
+                            with one simple idea: finding good cosmetics
+                            should be convenient, enjoyable and affordable.
+                        </p>
+
+                        <p>
+                            We bring together beauty essentials that can
+                            fit into your everyday routine — from skincare
+                            and lip products to makeup and beauty tools.
+                        </p>
+
+                        <ul class="check-list">
+                            <li>Affordable beauty products</li>
+                            <li>Cosmetics-focused collection</li>
+                            <li>Simple online shopping</li>
+                            <li>Friendly customer support</li>
+                        </ul>
+
+                        <a href="#contact" class="btn btn-primary">
+                            Talk To Us
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BLOG
+        ====================================================== -->
+
+        <section class="blog" id="blog">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="tag">Beauty Journal</span>
+
+                    <h2>Beauty Tips & Inspiration</h2>
+
+                    <p>
+                        Simple beauty ideas to help you get more
+                        from your cosmetics collection.
+                    </p>
+
+                </div>
+
+                <div class="blog-grid">
+
+                    <article class="blog-card">
+
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=85"
+                                alt="Makeup products"
+                                loading="lazy">
+                        </div>
+
+                        <div class="blog-content">
+                            <span class="blog-date">BEAUTY TIP</span>
+
+                            <h3>
+                                Build a Simple Everyday Makeup Bag
+                            </h3>
+
+                            <p>
+                                Discover the basic cosmetics that can
+                                help you create a fresh everyday look.
+                            </p>
+
+                            <a href="#contact" class="read-more">
+                                Read More →
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <article class="blog-card">
+
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=85"
+                                alt="Skincare products"
+                                loading="lazy">
+                        </div>
+
+                        <div class="blog-content">
+                            <span class="blog-date">SKINCARE</span>
+
+                            <h3>
+                                Why Your Skincare Routine Matters
+                            </h3>
+
+                            <p>
+                                A simple and consistent routine can make
+                                your beauty routine feel much easier.
+                            </p>
+
+                            <a href="#contact" class="read-more">
+                                Read More →
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <article class="blog-card">
+
+                        <div class="blog-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=800&q=85"
+                                alt="Beauty skincare collection"
+                                loading="lazy">
+                        </div>
+
+                        <div class="blog-content">
+                            <span class="blog-date">BEAUTY CARE</span>
+
+                            <h3>
+                                Shop Smart: Choosing Beauty Products
+                            </h3>
+
+                            <p>
+                                Learn how to focus your beauty shopping
+                                on products that actually fit your routine.
+                            </p>
+
+                            <a href="#contact" class="read-more">
+                                Read More →
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TESTIMONIALS
+        ====================================================== -->
+
+        <section class="testimonials">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="tag">Happy Customers</span>
+                    <h2>Beauty With A Smile</h2>
+                    <p>
+                        We're building a beauty community around
+                        convenience, affordability and great service.
+                    </p>
+                </div>
+
+                <div class="testimonial-grid">
+
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "I love how easy it is to browse the products.
+                            The prices are also very friendly."
+                        </p>
+
+                        <div class="customer">
+                            <div class="avatar">A</div>
+
+                            <div>
+                                <strong>Amaka</strong>
+                                <span>Happy Customer</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "The website makes shopping for beauty products
+                            simple. I can easily see what I want and add it
+                            to my cart."
+                        </p>
+
+                        <div class="customer">
+                            <div class="avatar">C</div>
+
+                            <div>
+                                <strong>Chiamaka</strong>
+                                <span>Happy Customer</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "Queeneth Kosy is a beautiful idea for anyone
+                            looking for affordable cosmetics."
+                        </p>
+
+                        <div class="customer">
+                            <div class="avatar">E</div>
+
+                            <div>
+                                <strong>Esther</strong>
+                                <span>Happy Customer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section class="contact" id="contact">
+
+            <div class="container">
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+
+                        <span class="tag">Get In Touch</span>
+
+                        <h2>Let's talk beauty.</h2>
+
+                        <p>
+                            Have a question about a product, an order,
+                            availability or anything else? Contact
+                            Queeneth Kosy Business Solution directly.
+                        </p>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">📞</div>
+
+                            <div>
+                                <strong>Phone / WhatsApp</strong>
+
+                                <a href="tel:09046932243">
+                                    09046932243
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">✉️</div>
+
+                            <div>
+                                <strong>Email</strong>
+
+                                <a href="mailto:asikakosisochuku55@gmail.com">
+                                    asikakosisochuku55@gmail.com
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">🛍️</div>
+
+                            <div>
+                                <strong>Shopping</strong>
+
+                                <span>
+                                    Cosmetics • Makeup • Skincare
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <form class="contact-form"
+                        onsubmit="sendContactMessage(event)">
+
+                        <h3>Send Us A Message</h3>
+
+                        <div class="form-group">
+                            <label>Your Name</label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Enter your name"
+                                required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Email Address</label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                placeholder="you@example.com"
+                                required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Subject</label>
+
+                            <select id="contactSubject">
+                                <option>Product enquiry</option>
+                                <option>Order enquiry</option>
+                                <option>General enquiry</option>
+                                <option>Partnership</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Message</label>
+
+                            <textarea
+                                id="contactMessage"
+                                placeholder="How can we help you?"
+                                required></textarea>
+                        </div>
+
+
+                        <button class="btn btn-primary" type="submit">
+                            Send Message ✉️
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             NEWSLETTER
+        ====================================================== -->
+
+        <section class="newsletter">
+
+            <div class="container">
+
+                <div class="newsletter-box">
+
+                    <h2>Join Our Beauty List</h2>
+
+                    <p>
+                        Get beauty tips, new product updates and
+                        special offers directly in your inbox.
+                    </p>
+
+                    <form class="newsletter-form"
+                        onsubmit="subscribeNewsletter(event)">
+
+                        <input
+                            type="email"
+                            placeholder="Enter your email address"
+                            required>
+
+                        <button class="btn btn-primary" type="submit">
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+
+                    <svg class="logo-svg" viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                        <circle cx="50" cy="50" r="46"
+                            fill="#fff7f2"
+                            stroke="#7da58b"
+                            stroke-width="3"/>
+
+                        <path d="M50 57 C33 47 32 30 43 24
+                                 C48 31 50 38 50 47
+                                 C50 38 53 30 58 24
+                                 C68 31 67 47 50 57Z"
+                            fill="#e98aaa"/>
+
+                        <path d="M47 60 C31 58 22 63 19 73
+                                 C31 76 42 71 50 63Z"
+                            fill="#7da58b"/>
+
+                        <path d="M53 60 C69 58 78 63 81 73
+                                 C69 76 58 71 50 63Z"
+                            fill="#5e8a6d"/>
+
+                        <text x="50" y="86"
+                            text-anchor="middle"
+                            font-size="17"
+                            font-family="Georgia"
+                            font-weight="bold"
+                            fill="#c85f83">QK</text>
+                    </svg>
+
+                    <div class="logo-text">
+                        <strong>Queeneth Kosy</strong>
+                        <span>BUSINESS SOLUTION</span>
+                    </div>
+
+                </a>
+
+                <p>
+                    Affordable cosmetics for everyday beauty.
+                    Shop confidently with Queeneth Kosy Business Solution.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">About Us</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h3>Categories</h3>
+
+                <a href="#shop">Skincare</a>
+                <a href="#shop">Makeup</a>
+                <a href="#shop">Lip Care</a>
+                <a href="#shop">Beauty Tools</a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h3>Contact</h3>
+
+                <a href="tel:09046932243">
+                    📞 09046932243
+                </a>
+
+                <a href="mailto:asikakosisochuku55@gmail.com">
+                    ✉️ Email Us
+                </a>
+
+                <a href="#contact">
+                    💗 Customer Support
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="year"></span>
+                Queeneth Kosy Business Solution.
+                All rights reserved.
+            </span>
+
+            <span>
+                Beauty • Confidence • Affordability
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         CART
+    ========================================================== -->
+
+    <div class="overlay"
+        id="overlay"
+        onclick="closeCart()">
+    </div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCart()">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">₦0</span>
+            </div>
+
+            <button
+                class="btn btn-primary checkout-btn"
+                onclick="checkout()">
+                Continue To Order →
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         ACCOUNT MODAL
+    ========================================================== -->
+
+    <div class="modal" id="accountModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                onclick="closeAccount()">
+                ✕
+            </button>
+
+            <h2>Welcome Back 💗</h2>
+
+            <p>
+                Your customer account area. Enter your details below
+                to save your information on this device.
+            </p>
+
+            <form onsubmit="saveAccount(event)">
+
+                <div class="form-group">
+
+                    <label>Your Name</label>
+
+                    <input
+                        id="accountName"
+                        type="text"
+                        placeholder="Your name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        id="accountEmail"
+                        type="email"
+                        placeholder="Your email"
+                        required>
+
+                </div>
+
+
+                <button class="btn btn-primary"
+                    style="width:100%"
+                    type="submit">
+                    Save My Details
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         TOAST
+    ========================================================== -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* =====================================================
+           PRODUCT DATABASE
+
+           ONLY COSMETICS ARE INCLUDED.
+        ====================================================== */
+
+        const products = [
+
+            {
+                id: 1,
+                name: "Hydrating Face Cream",
+                category: "skincare",
+                price: 6500,
+                oldPrice: 8000,
+                badge: "POPULAR",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 2,
+                name: "Glow Facial Serum",
+                category: "skincare",
+                price: 7200,
+                oldPrice: 9000,
+                badge: "NEW",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 3,
+                name: "Nourishing Body Cream",
+                category: "skincare",
+                price: 5800,
+                oldPrice: 7000,
+                badge: "DEAL",
+                rating: 4,
+                image:
+                    "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 4,
+                name: "Everyday Makeup Set",
+                category: "makeup",
+                price: 12500,
+                oldPrice: 15000,
+                badge: "BEST SELLER",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 5,
+                name: "Beauty Blending Brush",
+                category: "tools",
+                price: 3500,
+                oldPrice: 4500,
+                badge: "VALUE",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 6,
+                name: "Silky Lip Gloss",
+                category: "lips",
+                price: 2800,
+                oldPrice: 3500,
+                badge: "FAVOURITE",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 7,
+                name: "Soft Matte Lipstick",
+                category: "lips",
+                price: 3200,
+                oldPrice: 4000,
+                badge: "NEW",
+                rating: 4,
+                image:
+                    "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 8,
+                name: "Daily Sunscreen",
+                category: "skincare",
+                price: 6900,
+                oldPrice: 8500,
+                badge: "ESSENTIAL",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 9,
+                name: "Gentle Face Cleanser",
+                category: "skincare",
+                price: 4800,
+                oldPrice: 6000,
+                badge: "VALUE",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 10,
+                name: "Radiant Makeup Palette",
+                category: "makeup",
+                price: 8500,
+                oldPrice: 10500,
+                badge: "POPULAR",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 11,
+                name: "Luxury Beauty Sponge",
+                category: "tools",
+                price: 2500,
+                oldPrice: 3000,
+                badge: "DEAL",
+                rating: 4,
+                image:
+                    "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=85"
+            },
+
+            {
+                id: 12,
+                name: "Moisturising Lip Balm",
+                category: "lips",
+                price: 1800,
+                oldPrice: 2500,
+                badge: "AFFORDABLE",
+                rating: 5,
+                image:
+                    "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=800&q=85"
+            }
+
+        ];
+
+
+        /* =====================================================
+           CART
+        ====================================================== */
+
+        let cart = JSON.parse(
+            localStorage.getItem("queenethKosyCart")
+        ) || [];
+
+
+        let currentCategory = "all";
+
+
+        function formatMoney(amount) {
+
+            return new Intl.NumberFormat("en-NG", {
+                style: "currency",
+                currency: "NGN",
+                maximumFractionDigits: 0
+            }).format(amount);
+
+        }
+
+
+        /* =====================================================
+           DISPLAY PRODUCTS
+        ====================================================== */
+
+        function displayProducts(list = products) {
+
+            const grid =
+                document.getElementById("productsGrid");
+
+            if (list.length === 0) {
+
+                grid.innerHTML = `
+                    <div style="
+                        grid-column:1/-1;
+                        text-align:center;
+                        padding:50px;
+                        color:#8a7973;">
+                        <div style="font-size:45px;">🔎</div>
+                        <h3>No cosmetics found</h3>
+                        <p>Try another search.</p>
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            grid.innerHTML = list.map(product => {
+
+                return `
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                ${product.badge}
+                            </span>
+
+                            <button
+                                class="wishlist"
+                                onclick="toggleWishlist(this)"
+                                title="Add to wishlist">
+                                ♡
+                            </button>
+
+                            <img
+                                src="${product.image}"
+                                alt="${product.name}"
+                                width="800"
+                                height="800"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                ${product.category}
+                            </span>
+
+                            <h3>${product.name}</h3>
+
+                            <div class="stars">
+                                ${"★".repeat(product.rating)}
+                                <span style="color:#ccc">
+                                    ${"★".repeat(5 - product.rating)}
+                                </span>
+                            </div>
+
+
+                            <div class="product-bottom">
+
+                                <div>
+
+                                    <span class="price">
+                                        ${formatMoney(product.price)}
+                                    </span>
+
+                                    <span class="old-price">
+                                        ${formatMoney(product.oldPrice)}
+                                    </span>
+
+                                </div>
+
+                                <button
+                                    class="add-cart"
+                                    onclick="addToCart(${product.id})"
+                                    title="Add to cart">
+                                    🛒
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                `;
+
+            }).join("");
+
+        }
+
+
+        /* =====================================================
+           FILTER
+        ====================================================== */
+
+        function filterProducts(category, button) {
+
+            currentCategory = category;
+
+            document
+                .querySelectorAll(".filter-btn")
+                .forEach(btn => btn.classList.remove("active"));
+
+            button.classList.add("active");
+
+            const search =
+                document
+                    .getElementById("searchInput")
+                    .value
+                    .toLowerCase();
+
+            let filtered = products;
+
+            if (category !== "all") {
+
+                filtered =
+                    filtered.filter(
+                        product =>
+                            product.category === category
+                    );
+
+            }
+
+            if (search) {
+
+                filtered =
+                    filtered.filter(product =>
+                        product.name
+                            .toLowerCase()
+                            .includes(search)
+                    );
+
+            }
+
+            displayProducts(filtered);
+
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ====================================================== */
+
+        function searchProducts() {
+
+            const search =
+                document
+                    .getElementById("searchInput")
+                    .value
+                    .toLowerCase()
+                    .trim();
+
+
+            let filtered = products;
+
+
+            if (currentCategory !== "all") {
+
+                filtered =
+                    filtered.filter(
+                        product =>
+                            product.category === currentCategory
+                    );
+
+            }
+
+
+            if (search) {
+
+                filtered =
+                    filtered.filter(product =>
+                        product.name
+                            .toLowerCase()
+                            .includes(search)
+                    );
+
+            }
+
+
+            displayProducts(filtered);
+
+        }
+
+
+        /* =====================================================
+           ADD TO CART
+        ====================================================== */
+
+        function addToCart(productId) {
+
+            const product =
+                products.find(
+                    item => item.id === productId
+                );
+
+            if (!product) return;
+
+
+            const existing =
+                cart.find(
+                    item => item.id === productId
+                );
+
+
+            if (existing) {
+
+                existing.quantity++;
+
+            } else {
+
+                cart.push({
+                    ...product,
+                    quantity: 1
+                });
+
+            }
+
+
+            saveCart();
+
+            showToast(
+                `${product.name} added to your cart 💗`
+            );
+
+        }
+
+
+        /* =====================================================
+           SAVE CART
+        ====================================================== */
+
+        function saveCart() {
+
+            localStorage.setItem(
+                "queenethKosyCart",
+                JSON.stringify(cart)
+            );
+
+            updateCartCount();
+
+            renderCart();
+
+        }
+
+
+        /* =====================================================
+           CART COUNT
+        ====================================================== */
+
+        function updateCartCount() {
+
+            const count =
+                cart.reduce(
+                    (total, item) =>
+                        total + item.quantity,
+                    0
+                );
+
+            document.getElementById("cartCount")
+                .textContent = count;
+
+        }
+
+
+        /* =====================================================
+           RENDER CART
+        ====================================================== */
+
+        function renderCart() {
+
+            const cartItems =
+                document.getElementById("cartItems");
+
+            const cartTotal =
+                document.getElementById("cartTotal");
+
+
+            if (cart.length === 0) {
+
+                cartItems.innerHTML = `
+                    <div class="empty-cart">
+                        <div>🛍️</div>
+                        <h3>Your cart is empty</h3>
+                        <p>
+                            Add some beautiful cosmetics
+                            to get started.
+                        </p>
+                    </div>
+                `;
+
+                cartTotal.textContent = "₦0";
+
+                return;
+
+            }
+
+
+            cartItems.innerHTML =
+                cart.map(item => `
+
+                    <div class="cart-item">
+
+                        <img
+                            src="${item.image}"
+                            alt="${item.name}">
+
+                        <div>
+
+                            <h4>${item.name}</h4>
+
+                            <small>
+                                ${formatMoney(item.price)}
+                            </small>
+
+                            <div class="quantity">
+
+                                <button
+                                    onclick="changeQuantity(${item.id}, -1)">
+                                    −
+                                </button>
+
+                                <span>
+                                    ${item.quantity}
+                                </span>
+
+                                <button
+                                    onclick="changeQuantity(${item.id}, 1)">
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="remove-item"
+                            onclick="removeFromCart(${item.id})">
+                            ✕
+                        </button>
+
+                    </div>
+
+                `).join("");
+
+
+            const total =
+                cart.reduce(
+                    (sum, item) =>
+                        sum + item.price * item.quantity,
+                    0
+                );
+
+
+            cartTotal.textContent =
+                formatMoney(total);
+
+        }
+
+
+        /* =====================================================
+           QUANTITY
+        ====================================================== */
+
+        function changeQuantity(productId, change) {
+
+            const item =
+                cart.find(
+                    product => product.id === productId
+                );
+
+            if (!item) return;
+
+
+            item.quantity += change;
+
+
+            if (item.quantity <= 0) {
+
+                cart =
+                    cart.filter(
+                        product =>
+                            product.id !== productId
+                    );
+
+            }
+
+
+            saveCart();
+
+        }
+
+
+        /* =====================================================
+           REMOVE
+        ====================================================== */
+
+        function removeFromCart(productId) {
+
+            cart =
+                cart.filter(
+                    item => item.id !== productId
+                );
+
+            saveCart();
+
+            showToast("Item removed from cart.");
+
+        }
+
+
+        /* =====================================================
+           OPEN CART
+        ====================================================== */
+
+        function openCart() {
+
+            document
+                .getElementById("cartDrawer")
+                .classList.add("active");
+
+            document
+                .getElementById("overlay")
+                .classList.add("active");
+
+            renderCart();
+
+        }
+
+
+        /* =====================================================
+           CLOSE CART
+        ====================================================== */
+
+        function closeCart() {
+
+            document
+                .getElementById("cartDrawer")
+                .classList.remove("active");
+
+            document
+                .getElementById("overlay")
+                .classList.remove("active");
+
+        }
+
+
+        /* =====================================================
+           CHECKOUT
+
+           This version prepares an email order because a
+           real online payment gateway requires backend/API
+           integration.
+        ====================================================== */
+
+        function checkout() {
+
+            if (cart.length === 0) {
+
+                showToast(
+                    "Please add a cosmetic to your cart first."
+                );
+
+                return;
+
+            }
+
+
+            let orderText =
+                "Hello Queeneth Kosy Business Solution,%0D%0A%0D%0A" +
+                "I would like to order:%0D%0A";
+
+
+            cart.forEach(item => {
+
+                orderText +=
+                    `- ${item.name} x${item.quantity} = ${formatMoney(item.price * item.quantity)}%0D%0A`;
+
+            });
+
+
+            const total =
+                cart.reduce(
+                    (sum, item) =>
+                        sum + item.price * item.quantity,
+                    0
+                );
+
+
+            orderText +=
+                `%0D%0ATotal: ${formatMoney(total)}%0D%0A%0D%0A` +
+                "Please let me know the next steps for payment and delivery.";
+
+
+            window.location.href =
+                `mailto:asikakosisochuku55@gmail.com?subject=New Cosmetics Order&body=${orderText}`;
+
+        }
+
+
+        /* =====================================================
+           ACCOUNT
+        ====================================================== */
+
+        function openAccount() {
+
+            const modal =
+                document.getElementById("accountModal");
+
+            const saved =
+                JSON.parse(
+                    localStorage.getItem("queenethKosyAccount")
+                );
+
+
+            if (saved) {
+
+                document.getElementById("accountName")
+                    .value = saved.name || "";
+
+                document.getElementById("accountEmail")
+                    .value = saved.email || "";
+
+            }
+
+
+            modal.classList.add("active");
+
+        }
+
+
+        function closeAccount() {
+
+            document
+                .getElementById("accountModal")
+                .classList.remove("active");
+
+        }
+
+
+        function saveAccount(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("accountName").value;
+
+            const email =
+                document.getElementById("accountEmail").value;
+
+
+            localStorage.setItem(
+                "queenethKosyAccount",
+                JSON.stringify({
+                    name,
+                    email
+                })
+            );
+
+
+            closeAccount();
+
+            showToast(
+                `Welcome, ${name}! Your details have been saved. 💗`
+            );
+
+        }
+
+
+        /* =====================================================
+           WISHLIST
+        ====================================================== */
+
+        function toggleWishlist(button) {
+
+            if (button.textContent.trim() === "♡") {
+
+                button.textContent = "♥";
+                button.style.background = "#ffe7ef";
+
+                showToast(
+                    "Added to your beauty wishlist 💗"
+                );
+
+            } else {
+
+                button.textContent = "♡";
+                button.style.background = "white";
+
+            }
+
+        }
+
+
+        /* =====================================================
+           CONTACT FORM
+        ====================================================== */
+
+        function sendContactMessage(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("contactName").value;
+
+            const email =
+                document.getElementById("contactEmail").value;
+
+            const subject =
+                document.getElementById("contactSubject").value;
+
+            const message =
+                document.getElementById("contactMessage").value;
+
+
+            const body =
+                `Hello Queeneth Kosy Business Solution,%0D%0A%0D%0A` +
+                `Name: ${encodeURIComponent(name)}%0D%0A` +
+                `Email: ${encodeURIComponent(email)}%0D%0A` +
+                `Subject: ${encodeURIComponent(subject)}%0D%0A%0D%0A` +
+                `${encodeURIComponent(message)}`;
+
+
+            window.location.href =
+                `mailto:asikakosisochuku55@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        function subscribeNewsletter(event) {
+
+            event.preventDefault();
+
+            const input =
+                event.target.querySelector("input");
+
+            showToast(
+                `Thank you! ${input.value} has been added to our beauty list. 💗`
+            );
+
+            input.value = "";
+
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+        function toggleMenu() {
+
+            document
+                .getElementById("mainNav")
+                .classList.toggle("open");
+
+        }
+
+
+        document
+            .querySelectorAll("#mainNav a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    document
+                        .getElementById("mainNav")
+                        .classList.remove("open");
+
+                });
+
+            });
+
+
+        /* =====================================================
+           TOAST
+        ====================================================== */
+
+        let toastTimer;
+
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById("toast");
+
+            toast.textContent = message;
+
+            toast.classList.add("show");
+
+
+            clearTimeout(toastTimer);
+
+
+            toastTimer = setTimeout(() => {
+
+                toast.classList.remove("show");
+
+            }, 3000);
+
+        }
+
+
+        /* =====================================================
+           FOOTER YEAR
+        ====================================================== */
+
+        document.getElementById("year")
+            .textContent = new Date().getFullYear();
+
+
+        /* =====================================================
+           INITIALIZE
+        ====================================================== */
+
+        displayProducts();
+
+        updateCartCount();
+
+        renderCart();
+
+    </script>
+
+</body>
+</html>
